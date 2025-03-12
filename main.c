@@ -98,16 +98,17 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		 if(HAL_GPIO_ReadPin (GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
-		 {
-		 	  //Turn LED ON
-			 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-		 }
-		 else
-		 {
-		 	  //Turn LED OFF
-		 	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-		 }
+	  //Check if button pressed
+	 if(HAL_GPIO_ReadPin (GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET) 
+	 {
+		//Turn LED ON
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+	 }
+	 else
+	 {
+		//Turn LED OFF
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+	 }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
